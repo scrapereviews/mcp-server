@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "scrapereviews": {
+      "command": "uvx",
+      "args": ["scrapereviews-mcp"],
+      "env": {
+        "SCRAPEREVIEWS_API_KEY": "${SCRAPEREVIEWS_API_KEY}"
+      }
+    }
+  }
+}

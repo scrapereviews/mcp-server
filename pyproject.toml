@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "scrapereviews-mcp"
+version = "0.1.0"
+description = "MCP server for the ScrapeReviews API: Trustpilot companies, reviews and categories"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "ScrapeReviews" }]
+keywords = ["mcp", "trustpilot", "reviews", "ai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "mcp[cli]>=1.2,<2",  # 2.x renamed FastMCP: the server does not start on it
+    "httpx>=0.27,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0,<10",
+    "pytest-asyncio>=0.24,<2",
+    "respx>=0.22,<1",
+]
+
+[project.urls]
+Homepage = "https://scrapereviews.com"
+Documentation = "https://scrapereviews.com/docs/mcp"
+Repository = "https://github.com/scrapereviews/mcp-server"
+
+[project.scripts]
+scrapereviews-mcp = "scrapereviews_mcp.server:main"
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]

@@ -1,0 +1,14 @@
+{
+  "name": "scrapereviews-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for the ScrapeReviews API: Trustpilot companies, reviews and categories (npm wrapper)",
+  "license": "MIT",
+  "bin": {
+    "scrapereviews-mcp": "./bin/cli.js"
+  },
+  "files": ["bin/"],
+  "keywords": ["mcp", "trustpilot", "reviews", "ai"],
+  "engines": {
+    "node": ">=18"
+  }
+}
