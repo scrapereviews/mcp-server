@@ -2,6 +2,8 @@
 
 <!-- mcp-name: com.scrapereviews/scrapereviews -->
 
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/scrapereviews/mcp-server)
+
 An [MCP](https://modelcontextprotocol.io) server that gives AI assistants (Claude Desktop, Cursor, etc.) access to Trustpilot company profiles, reviews and category rankings via the [ScrapeReviews](https://scrapereviews.com) API.
 
 ## Features
